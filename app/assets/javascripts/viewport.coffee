@@ -6,4 +6,5 @@ $ ->
     $("#viewport").mCustomScrollbar
         theme: "light"
         alwaysShowScrollbar: 1
-    
+        mouseWheel:
+            scrollAmount: 30
