@@ -114,3 +114,10 @@
 .c-hamburger--rot.is-active span {
   transform: rotate(90deg);
 }
+
+
+@media all and (max-width: 768px) {
+  .c-hamburger--htra , .c-hamburger--htra.is-active, .c-hamburger--rot, .c-hamburger--rot.is-active {
+    background: none;
+  }
+}

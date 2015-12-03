@@ -6,6 +6,7 @@
     top: 0px;
     left: 0px;
     background: rgba(0, 0, 0, .25);
+    z-index: 5;
 }
 
 
@@ -18,7 +19,8 @@
     background: #252525;
     overflow: hidden;
     padding-right: 16px;
-    transition: width 0.35s ease-out;
+    transition: width 0.35s ease-out, background 0.35s ease-out;
+    z-index: 10;
 
     &.expanded {
         width: 320px;
@@ -39,5 +41,83 @@
     .menu-content {
         width: 320px;
         height: 100%;
+    }
+}
+
+
+#menu-slider-horizontal-bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: none;
+    z-index: 10;
+    padding: 6px 0px;
+    transition: left 0.35s ease-out;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.expanded {
+        left: -320px;
+
+        button {
+            right: -20px !important;
+        }
+    }
+
+    button {
+        float: right;
+        position: relative;
+        right: 21px;
+        transition: right 0.35s ease-out;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 8px;
+        display: block;
+        width: calc(100% - 30px);
+        border-bottom: solid 1px rgba(255,255,255,.2);
+    }
+
+    .menu-slider-title {
+        position: static;
+        float: left;
+        width: auto;
+        height: auto;
+        padding: 0px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        font-size: 16px;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: normal;
+        margin-left: 8px;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    #menu-slider {
+        background: none;
+        
+         &.expanded {
+            background: #252525;
+        }
+
+        .swipe-button {
+            display: none;
+        }
+    }
+
+    #menu-slider-horizontal-bar {
+        display: block;
     }
 }
