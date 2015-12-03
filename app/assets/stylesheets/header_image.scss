@@ -1,5 +1,5 @@
 #header-image {
-    background-image: url(http://lorempixel.com/700/1200/nature/);
+    background-image: url(http://demo.onedesigns.com/graceunderpressure/journal/wp-content/uploads/sites/3/2015/07/4208247913_5a17ef8187_b.jpg);
     width: 37.5%;
     height: 100%;
     position: fixed;
@@ -7,6 +7,10 @@
     left: 0px;
     background-size: cover;
     background-position: top center;
+    display: flex;
+    align-items: flex-end;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     .overlay-gradient {
         width: 100%;
@@ -15,5 +19,37 @@
         top: 0px;
         left: 0px;
         background-image: linear-gradient(to top,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);
+        z-index: 1;
+    }
+
+    .inner-text {
+        width: 100%;
+        padding: 60px 0px;
+        z-index: 2;
+    }
+
+    .page-title {
+        color: rgb(255, 255, 255);
+        display: block;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-size: 2.4rem;
+        font-weight: 800;
+        max-width: 360px;
+        margin: 20px auto 10px auto;
+        text-align: center;
+    }
+
+    .page-description {
+        font-size: 24px;
+        font-size: 1.2rem;
+        color: #FFF;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        font-family: 'PT Serif', serif;
+        font-weight: 300;
+        max-width: 360px;
+        margin: 0px auto 10px auto;
+        text-align: center;
     }
 }
