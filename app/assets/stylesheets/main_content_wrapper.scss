@@ -75,9 +75,22 @@
     }
 }
 
+@media all and (min-width: 1856px) {
+    #content {
+        max-width: 720px;
+    }
+}
+
 @media all and (max-width: 768px) {
     #main-content-wrapper {
         padding-right: 0px; // because menu slider disappears
+    }
+}
+
+
+@media all and (min-width: 1856px) {
+    #main-content-wrapper {
+        padding-right: 336px; // because menu slider appears
     }
 }
 

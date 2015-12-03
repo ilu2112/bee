@@ -121,3 +121,18 @@
         display: block;
     }
 }
+
+
+@media all and (min-width: 1856px) {
+    #slider-glass-panel {
+        display: none !important;
+    }
+
+    #menu-slider {
+        width: 320px;
+
+        .swipe-button {
+            display: none;
+        }
+    }
+}
