@@ -1,0 +1,15 @@
+#main-content-wrapper {
+    position: relative;
+    left: 37.5%;
+    width: 62.5%;
+    min-height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 50px 40px 50px 0px;
+    
+    #content {
+        max-width: 640px;
+        background: #FFF;
+        margin: 0 auto;
+    }
+}

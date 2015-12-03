@@ -1,0 +1,12 @@
+#viewport {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .mCSB_inside > .mCSB_container {
+        margin-right: 0px;
+    }
+
+    .mCSB_scrollTools {
+        background: #252525;
+    }
+}
