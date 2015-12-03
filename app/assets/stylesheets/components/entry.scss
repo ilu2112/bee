@@ -1,3 +1,10 @@
+@media all and (min-width: 375px) {
+    .entry .entry-meta {
+        letter-spacing: 1px;
+    }
+}
+
+
 .entry {
     padding-bottom: 35px;
     border-bottom: 1px solid rgba(0,0,0,0.15);
@@ -28,7 +35,7 @@
         color: rgba(0,0,0,0.6);
         font-size: 13px;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
         text-transform: uppercase;
     }
 

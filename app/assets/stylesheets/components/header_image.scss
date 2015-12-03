@@ -33,22 +33,16 @@
         display: block;
         text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-size: 2.4rem;
         font-weight: 800;
-        max-width: 360px;
         margin: 20px auto 10px auto;
         text-align: center;
     }
 
     .page-description {
-        font-size: 24px;
-        font-size: 1.2rem;
         color: #FFF;
         text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         font-family: 'PT Serif', serif;
         font-weight: 300;
-        max-width: 360px;
         margin: 0px auto 10px auto;
         text-align: center;
     }
@@ -63,5 +57,115 @@
         position: relative;
         min-height: 100%;
         min-height: 100vh;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    #header-image {
+        padding-right: 0px; // because menu slider disappears
+    }
+}
+
+
+@media all and (min-width: 300px) {
+    .page-title, .page-description {
+        max-width: 320px;
+    }
+
+    .page-title {
+        font-size: 48px;
+        font-size: 2.1rem;
+    }
+
+    .page-description {
+        font-size: 21px;
+        font-size: 1.05rem;
+    }
+}
+
+@media all and (min-width: 414px) {
+    .page-title, .page-description {
+        max-width: 360px;
+    }
+}
+
+@media all and (min-width: 480px) {
+    .page-title {
+        font-size: 48px;
+        font-size: 2.4rem;
+    }
+
+    .page-description {
+        font-size: 24px;
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (min-width: 568px) {
+    .page-title, .page-description {
+        max-width: 480px;
+    }
+}
+
+@media all and (min-width: 640px) {
+    .page-title, .page-description {
+        max-width: 540px;
+    }
+}
+
+@media all and (min-width: 667px) {
+    .page-title, .page-description {
+        max-width: 600px;
+    }
+}
+
+@media all and (min-width: 736px) {
+    .page-title, .page-description {
+        max-width: 640px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .page-title {
+        font-size: 60px;
+        font-size: 3rem;
+    }
+
+    .page-description {
+        font-size: 32px;
+        font-size: 1.6rem;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .page-title, .page-description {
+        max-width: 320px;
+    }
+
+    .page-title {
+        font-size: 44px;
+        font-size: 2.2rem;
+    }
+
+    .page-description {
+        font-size: 22px;
+        font-size: 1.1rem;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .page-title, .page-description {
+        max-width: 360px;
+    }
+
+    .page-title {
+        font-size: 48px;
+        font-size: 2.4rem;
+    }
+
+    .page-description {
+        font-size: 24px;
+        font-size: 1.2rem;
     }
 }

@@ -8,7 +8,6 @@
     padding: 50px 40px 50px 0px;
     
     #content {
-        max-width: 640px;
         background: #FFF;
         margin: 0 auto;
     }
@@ -24,3 +23,64 @@
         left: 0px;
     }
 }
+
+
+@media all and (min-width: 375px) {
+    #content {
+        max-width: 320px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media all and (min-width: 414px) {
+    #content {
+        max-width: 360px;
+    }
+}
+
+@media all and (min-width: 568px) {
+    #content {
+        max-width: 480px;
+    }
+}
+
+@media all and (min-width: 640px) {
+    #content {
+        max-width: 540px;
+    }
+}
+
+@media all and (min-width: 667px) {
+    #content {
+        max-width: 600px;
+    }
+}
+
+@media all and (min-width: 736px) {
+    #content {
+        max-width: 640px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    #content {
+        max-width: 480px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    #content {
+        max-width: 640px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #main-content-wrapper {
+        padding-right: 0px; // because menu slider disappears
+    }
+}
+
+
+
+
