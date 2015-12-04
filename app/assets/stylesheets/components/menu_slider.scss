@@ -21,17 +21,31 @@
     padding-right: 16px;
     transition: width 0.35s ease-out, background 0.35s ease-out;
     z-index: 10;
+    padding: 50px 30px 30px 30px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     &.expanded {
         width: 320px;
+
+        .menu-content {
+            opacity: 1.0;
+        }
+
+        .swipe-button {
+            top: 10px;
+            left: 25px;
+        }
     }
 
     .swipe-button {
         width: 30px;
         height: 30px;
         position: absolute;
-        top: 5px;
+        top: 10px;
         left: 5px;
+        transition: left 0.35s ease-out; 
 
         &:hover {
             cursor: pointer;
@@ -39,8 +53,85 @@
     }
 
     .menu-content {
-        width: 320px;
+        width: 260px;
         height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.35s ease-out;
+    }
+
+    .site-title {
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(255, 255, 255, 0.65);
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        transition: color .25s ease;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 12px;
+        margin-bottom: 12px;
+        display: block;
+
+        &:hover {
+            color: #FFF;
+        }
+    }
+
+    .site-description {
+        color: rgba(255,255,255,0.65);
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        font-family: 'PT Serif', serif;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .site-navigation {
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .fa {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        a {
+            display: block;
+            padding: 11px 0;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: "Fira Sans", sans-serif;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            color: rgba(255, 255, 255, .65);
+            text-decoration: none;
+            transition: color .25s ease;
+
+            &:hover, &.active {
+                color: #FFF;
+
+                .item-description {
+                    height: 20px;
+                }
+            }
+        }
+
+        .item-description {
+            margin-left: 28px;
+            display: block;
+            overflow: hidden;
+            height: 0px;
+            font-size: 11px;
+            font-style: italic;
+            font-weight: 300;
+            text-transform: lowercase;
+            color: #FFF;
+            line-height: 20px;
+            transition: height .25s ease;
+        }
     }
 }
 
@@ -51,7 +142,7 @@
     left: 0px;
     width: 100%;
     display: none;
-    z-index: 10;
+    z-index: 20;
     padding: 6px 0px;
     transition: left 0.35s ease-out;
 
@@ -63,7 +154,7 @@
         left: -320px;
 
         button {
-            right: -20px !important;
+            right: 20px;
         }
     }
 
@@ -133,6 +224,10 @@
 
         .swipe-button {
             display: none;
+        }
+
+        .site-navigation .item-description {
+            height: 20px;
         }
     }
 }

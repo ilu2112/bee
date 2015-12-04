@@ -48,5 +48,5 @@ end
 gem 'normalize-rails'
 gem 'scrollbar-rails'
 gem 'autoprefixer-rails'
-
+gem 'font-awesome-rails'
 
