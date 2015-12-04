@@ -28,6 +28,7 @@
 
     &.expanded {
         width: 320px;
+        background: #252525;
 
         .menu-content {
             opacity: 1.0;
@@ -55,7 +56,7 @@
     .menu-content {
         width: 260px;
         height: 100%;
-        opacity: 0.2;
+        opacity: 0;
         transition: opacity 0.35s ease-out;
     }
 
@@ -195,13 +196,14 @@
 }
 
 
+
+// ...
+// RWD: when menu slider horizontal bar appears
+// ...
+
 @media all and (max-width: 768px) {
     #menu-slider {
         background: none;
-        
-         &.expanded {
-            background: #252525;
-        }
 
         .swipe-button {
             display: none;
@@ -213,6 +215,11 @@
     }
 }
 
+
+
+// ...
+// RWD: when menu slider is fully visible
+// ...
 
 @media all and (min-width: 1856px) {
     #slider-glass-panel {

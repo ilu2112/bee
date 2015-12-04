@@ -13,6 +13,7 @@ $ ->
 
     $('#slider-glass-panel').on 'click', (e) ->
         e.preventDefault()
+        e.stopPropagation()
         $("#menu-slider").removeClass "expanded"
         $("#menu-slider-horizontal-bar").removeClass "expanded"
         $("#slider-glass-panel").fadeOut 350

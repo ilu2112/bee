@@ -14,6 +14,10 @@
 }
 
 
+
+// ...
+// RWD: when header image goes above content
+// ...
 @media all and (max-width: 992px) {
     #main-content-wrapper {
         width: 100%;
@@ -25,6 +29,11 @@
 }
 
 
+
+// ...
+// RWD: content widths for different vieport sizes
+// ...
+
 @media all and (min-width: 375px) {
     #content {
         max-width: 320px;
@@ -33,11 +42,13 @@
     }
 }
 
+
 @media all and (min-width: 414px) {
     #content {
         max-width: 360px;
     }
 }
+
 
 @media all and (min-width: 568px) {
     #content {
@@ -45,11 +56,13 @@
     }
 }
 
+
 @media all and (min-width: 640px) {
     #content {
         max-width: 540px;
     }
 }
+
 
 @media all and (min-width: 667px) {
     #content {
@@ -57,11 +70,13 @@
     }
 }
 
+
 @media all and (min-width: 736px) {
     #content {
         max-width: 640px;
     }
 }
+
 
 @media all and (min-width: 992px) {
     #content {
@@ -69,17 +84,25 @@
     }
 }
 
+
 @media all and (min-width: 1200px) {
     #content {
         max-width: 640px;
     }
 }
 
+
 @media all and (min-width: 1856px) {
     #content {
         max-width: 720px;
     }
 }
+
+
+
+// ...
+// RWD: when menu slider bar disappears
+// ...
 
 @media all and (max-width: 768px) {
     #main-content-wrapper {
@@ -88,12 +111,13 @@
 }
 
 
+
+// ...
+// RWD: when menu slider bar becomes visible full time
+// ...
+
 @media all and (min-width: 1856px) {
     #main-content-wrapper {
         padding-right: 336px; // because menu slider appears
     }
 }
-
-
-
-
