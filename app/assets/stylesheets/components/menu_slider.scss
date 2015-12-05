@@ -204,8 +204,12 @@
 
 @media all and (max-width: 768px) {
     #menu-slider {
-        background: none;
+        transform: translate3d(60px, 0, 0);
 
+        .menu-content {
+            opacity: 1;
+        }
+        
         .swipe-button {
             display: none;
         }
@@ -255,7 +259,12 @@
     #menu-slider {
         width: 280px;
         padding: 22px 15px 15px 15px;
+        transform: translate3d(20px, 0, 0);
         
+        .menu-content {
+            opacity: 1;
+        }
+
         &.expanded {
             transform: translate3d(-260px, 0, 0);
         }
