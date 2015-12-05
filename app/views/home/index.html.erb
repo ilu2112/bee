@@ -1,15 +1,17 @@
-<% (1..10).each do |i| %>
+<% @blog_posts.each do |blog_post| %>
     <div class="entry">
         <h2 class="entry-title">
             <a href="#">
-                Why “Don’t Worry About Money, Just Travel” Is The Worst Advice Of All Time
+                <%= blog_post.title %>
             </a>
         </h2>
         <div class="entry-summary">
-            I have an internet acquaintance that I’ve been following on social media for a little over two years now, an all-around nice, smart girl…
+            <%= blog_post.summary %>
         </div>
         <div class="entry-meta">
-            <a href="#">JULY 16, 2015</a> BY <a href="#">DANIEL TARA</a>
+            <%= blog_post.created_at.strftime "%B %m, %Y" %>
+            BY
+            <a href="#">MARCIN SKIBA</a>
         </div>
     </div> 
 <% end %>
