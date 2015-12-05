@@ -233,8 +233,43 @@
             display: none;
         }
 
+        .menu-content {
+            opacity: 1.0;
+        }
+
         .site-navigation .item-description {
             height: 20px;
         }
     }
 }
+
+
+
+// ...
+// RWD: smalles possible screen width - menu slider has to be narrower
+// ...
+
+@media all and (max-width: 400px) {
+    #menu-slider.expanded { 
+        width: 280px;
+        padding: 22px 15px 15px 15px;
+    }
+
+    #menu-slider-horizontal-bar.expanded {
+        left: -280px;
+    }
+}
+
+
+// ...
+// RWD: change top padding when slipe butten is outside
+// ...
+
+@media all and (max-width: 768px) {
+    #menu-slider {
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+}
+
+

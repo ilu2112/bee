@@ -34,6 +34,15 @@
 // RWD: content widths for different vieport sizes
 // ...
 
+@media all and (min-width: 300px) {
+    #content {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
 @media all and (min-width: 375px) {
     #content {
         max-width: 320px;
