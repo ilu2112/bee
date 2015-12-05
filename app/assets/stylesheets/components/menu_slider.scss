@@ -16,10 +16,11 @@
     position: fixed;
     right: -260px;
     top: 0px;
+    transform: translate3d(0, 0, 0);
     background: #252525;
     overflow: hidden;
     padding-right: 16px;
-    transition: right 0.35s ease-out, background 0.35s ease-out;
+    transition: transform 0.35s ease-out, background 0.35s ease-out;
     z-index: 10;
     padding: 50px 30px 30px 30px;
     box-sizing: border-box;
@@ -28,7 +29,7 @@
 
     &.expanded {
         background: #252525;
-        right: 0px;
+        transform: translate3d(-260px, 0, 0);
 
         .menu-content {
             opacity: 1.0;
@@ -145,14 +146,14 @@
     display: none;
     z-index: 20;
     padding: 6px 0px;
-    transition: left 0.35s ease-out;
+    transition: transform 0.35s ease-out;
 
     &:hover {
         cursor: pointer;
     }
 
     &.expanded {
-        left: -320px;
+        transform: translate3d(-310px, 0, 0);
 
         button {
             right: 20px;
@@ -227,7 +228,8 @@
     }
 
     #menu-slider {
-        right: 0px;
+        transform: translate3d(0, 0, 0) !important;
+        right: 0px !important;
 
         .swipe-button {
             display: none;
@@ -253,10 +255,14 @@
     #menu-slider {
         width: 280px;
         padding: 22px 15px 15px 15px;
+        
+        &.expanded {
+            transform: translate3d(-260px, 0, 0);
+        }
     }
 
     #menu-slider-horizontal-bar.expanded {
-        left: -280px;
+        transform: translate3d(-270px, 0, 0);
     }
 }
 
