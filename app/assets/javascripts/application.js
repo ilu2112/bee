@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.mCustomScrollbar.concat.min
-//= require turbolinks
 //= require_tree .
