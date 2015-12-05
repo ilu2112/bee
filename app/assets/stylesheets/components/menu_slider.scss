@@ -11,15 +11,15 @@
 
 
 #menu-slider {
-    width: 40px;
+    width: 320px;
     height: 100%;
     position: fixed;
+    right: -260px;
     top: 0px;
-    right: 0px;
     background: #252525;
     overflow: hidden;
     padding-right: 16px;
-    transition: width 0.35s ease-out, background 0.35s ease-out;
+    transition: right 0.35s ease-out, background 0.35s ease-out;
     z-index: 10;
     padding: 50px 30px 30px 30px;
     box-sizing: border-box;
@@ -27,8 +27,8 @@
     -moz-osx-font-smoothing: grayscale;
 
     &.expanded {
-        width: 320px;
         background: #252525;
+        right: 0px;
 
         .menu-content {
             opacity: 1.0;
@@ -227,7 +227,7 @@
     }
 
     #menu-slider {
-        width: 320px;
+        right: 0px;
 
         .swipe-button {
             display: none;
@@ -250,7 +250,7 @@
 // ...
 
 @media all and (max-width: 400px) {
-    #menu-slider.expanded { 
+    #menu-slider {
         width: 280px;
         padding: 22px 15px 15px 15px;
     }
