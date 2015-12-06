@@ -5,6 +5,7 @@ gem 'mysql2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'active_skin', :git => 'https://github.com/ilu2112/active_skin.git'
+gem 'carrierwave'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

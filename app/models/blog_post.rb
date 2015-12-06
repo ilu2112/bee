@@ -1,4 +1,5 @@
 class BlogPost < ActiveRecord::Base
+  mount_uploader :featured_image, ImageUploader
   include ActionView::Helpers::TextHelper
 
   def summary
