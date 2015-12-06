@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
 gem 'mysql2'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'active_skin', :git => 'https://github.com/ilu2112/active_skin.git'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

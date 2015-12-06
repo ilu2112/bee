@@ -7,7 +7,7 @@ content_1 = """
     </p>
 """
 
-BlogPost.create(content: content_1, title: "Cras vitae lacinia nulla. Cras volutpat tempus dapibus.", featured_image: "http://lorempixel.com/800/1200/sports/")
+BlogPost.create!(content: content_1, title: "Cras vitae lacinia nulla. Cras volutpat tempus dapibus.", featured_image: "http://lorempixel.com/800/1200/sports/")
 
 content_2 = """
     <p>
@@ -18,7 +18,7 @@ content_2 = """
     </p>
 """
 
-BlogPost.create(content: content_2, title: "Nunc porttitor, quam viverra tempor malesuada?", featured_image: "http://lorempixel.com/800/1200/sports/")
+BlogPost.create!(content: content_2, title: "Nunc porttitor, quam viverra tempor malesuada?", featured_image: "http://lorempixel.com/800/1200/sports/")
 
 content_3 = """
     <p>
@@ -29,4 +29,6 @@ content_3 = """
     </p>
 """
 
-BlogPost.create(content: content_3, title: "Maecenas scelerisque tortor at varius luctus. Donec commodo ex non orc.", featured_image: "http://lorempixel.com/800/1200/sports/")
+BlogPost.create!(content: content_3, title: "Maecenas scelerisque tortor at varius luctus. Donec commodo ex non orc.", featured_image: "http://lorempixel.com/800/1200/sports/")
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.mCustomScrollbar.concat.min
-//= require_tree .
+//= require_directory .
