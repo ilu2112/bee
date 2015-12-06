@@ -20,8 +20,25 @@
 @import "active_skin";
 
 
+// tinyMCE: override unwanted Active Admin styles
 .mce-tinymce {
     display: inline-block !important;
     width: calc(80% - 2px) !important;
     margin-right: -20px !important;
+
+    .mce-container * {
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .mce-btn:hover {
+        background-color: #e3e3e3 !important;
+        button {
+            background: transparent !important;
+        }
+    }
+
+    button {
+        box-shadow: none !important;
+    }
 }
