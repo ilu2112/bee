@@ -18,3 +18,10 @@
 
 
 @import "active_skin";
+
+
+.mce-tinymce {
+    display: inline-block !important;
+    width: calc(80% - 2px) !important;
+    margin-right: -20px !important;
+}
