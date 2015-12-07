@@ -7,6 +7,37 @@
     p {
         margin-top: 0px;
     }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding-top: 1.1rem;
+        margin-top: 0px;
+    }
+
+    h1, h2 {
+        margin-bottom: 1.1rem;
+    }
+
+    h3, h4 {
+        margin-bottom: 0.7rem;
+    }
+
+    blockquote {
+        border-left: 2px solid rgba(0,0,0,.15);
+        padding-left: 0.5rem;
+    }
+
+    a {
+        border-color: inherit;
+        border-width: 0 0 1px;
+        border-style: solid;
+        color: inherit;
+        transition: opacity .25s ease;
+        text-decoration: none;
+        
+        &:hover {
+            opacity: .6;
+        }
+    }
 }
 
 

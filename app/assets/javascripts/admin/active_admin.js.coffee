@@ -13,6 +13,6 @@ $ ->
             'code link textcolor colorpicker image'
         ]
         toolbar: [
-            'styleselect | bold italic | undo redo | forecolor backcolor',
+            'styleselect | bold italic | undo redo | forecolor backcolor | bullist numlist',
             'image | link | code'
         ]
