@@ -2,6 +2,10 @@ class BlogPost < ActiveRecord::Base
   mount_uploader :featured_image, ImageUploader
   include ActionView::Helpers::TextHelper
 
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :featured_image, presence: true
+
   before_create :generate_preview_key
 
   def generate_preview_key
