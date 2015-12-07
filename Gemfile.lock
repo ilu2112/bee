@@ -16,12 +16,6 @@ GIT
       ransack (~> 1.3)
       sass-rails
 
-GIT
-  remote: https://github.com/ilu2112/active_skin.git
-  revision: f1a1fb36a4a237cb21cfd7a4a8424b9d4dfe348c
-  specs:
-    active_skin (0.0.9)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,6 +38,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_skin (0.0.12)
     activejob (4.2.5)
       activesupport (= 4.2.5)
       globalid (>= 0.3.0)
@@ -211,7 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_skin!
+  active_skin
   activeadmin!
   autoprefixer-rails
   byebug
