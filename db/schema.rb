@@ -47,11 +47,13 @@ ActiveRecord::Schema.define(version: 20151206083844) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "blog_posts", force: :cascade do |t|
-    t.string   "title",          limit: 255,   null: false
-    t.text     "content",        limit: 65535, null: false
-    t.string   "featured_image", limit: 255,   null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "title",          limit: 255,                   null: false
+    t.text     "content",        limit: 65535,                 null: false
+    t.string   "featured_image", limit: 255,                   null: false
+    t.boolean  "published",                    default: false
+    t.string   "preview_key",    limit: 255
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
 end
