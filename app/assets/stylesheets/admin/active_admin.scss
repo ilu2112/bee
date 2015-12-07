@@ -43,6 +43,22 @@
     }
 }
 
+.mce-floatpanel {
+    .mce-close {
+        box-shadow: none;
+        &:hover {
+            background: none;
+        }
+    }
+
+    button {
+        border-radius: 0px !important;
+        &:hover {
+            background: rgba(0, 0, 0, .15);
+        }
+    }
+}
+
 
 .featured-image {
     max-width: 100%;
