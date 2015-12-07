@@ -1,0 +1,7 @@
+<% content_for :header_image do %>
+    <%= render "header_image" %>
+<% end %>
+
+<div class="blog-post-content">
+    <%= @blog_post.content.html_safe %>
+</div>

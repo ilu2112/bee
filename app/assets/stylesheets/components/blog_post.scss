@@ -1,0 +1,31 @@
+.blog-post-content {
+    font-family: 'PT Serif', serif;
+    line-height: 1.62;
+    letter-spacing: 0.005rem;
+    color: #000;
+
+    p {
+        margin-top: 0px;
+    }
+}
+
+
+
+// ...
+// RWD: font size changes
+// ...
+
+@media all and (min-width: 375px) {
+    .blog-post-content {
+        font-size: 21px;
+        font-size: 1.05rem;
+    }
+}
+
+
+@media all and (min-width: 540px) {
+    .blog-post-content {
+        font-size: 22px;
+        font-size: 1.1rem;
+    }
+}

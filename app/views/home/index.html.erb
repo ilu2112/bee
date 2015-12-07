@@ -1,9 +1,12 @@
+<% content_for :header_image do %>
+    <%= render "header_image" %>
+<% end %>
+
+
 <% @blog_posts.each do |blog_post| %>
     <div class="entry">
         <h2 class="entry-title">
-            <a href="#">
-                <%= blog_post.title %>
-            </a>
+            <%= link_to blog_post.title, show_post_path(blog_post) %>
         </h2>
         <div class="entry-summary">
             <%= blog_post.summary %>

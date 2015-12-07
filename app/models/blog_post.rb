@@ -3,6 +3,6 @@ class BlogPost < ActiveRecord::Base
   include ActionView::Helpers::TextHelper
 
   def summary
-    truncate(strip_tags(content.html_safe), :length => 160, :separator => " ")
+    truncate(strip_tags(content.html_safe), :length => 140, :separator => " ")
   end
 end

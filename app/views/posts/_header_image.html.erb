@@ -1,0 +1,16 @@
+<div id="header-image" style="background-image: url(<%= @blog_post.featured_image.url %>);">
+    <div class="overlay-gradient"></div>
+    <div class="inner-text">
+        <h1 class="page-title">
+            <%= @blog_post.title %>
+        </h1>
+        <div class="page-description">
+            <%= @blog_post.summary %>
+        </div>
+        <div class="page-meta">
+            <%= @blog_post.created_at.strftime "%B %d, %Y" %>
+            BY
+            <a href="#">MARCIN SKIBA</a>
+        </div>
+    </div>
+</div>
