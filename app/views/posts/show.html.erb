@@ -2,6 +2,45 @@
     <%= render "header_image" %>
 <% end %>
 
+
 <div class="blog-post-content">
     <%= @blog_post.content.html_safe %>
 </div>
+
+
+<% if @blog_post.comments.length > 0 %>
+    <div class="heart-separator"></div>
+    <h3 id="add-comment-form-header" class="comment-section-header">Comments</h3>
+    Comments will be here...
+<% end %>
+
+
+<div class="heart-separator"></div>
+<h3 id="add-comment-form-header" class="comment-section-header">Leave a reply</h3>
+
+<%= form_for @comment, url: add_comment_path(@blog_post), html: {class: 'add-comment-form'} do |f| %>
+    <% if flash[:comment_status] == 'comment_error' %>
+        <div class="error-alert">
+            Please fill in required fields!
+        </div>
+    <% end %>
+     <% if flash[:comment_status] == 'comment_added' %>
+        <div class="success-alert">
+            New comment has been added.
+        </div>
+    <% end %>
+
+    <%= f.text_field :name, placeholder: 'Name *', class: "#{'error' unless f.object.errors[:name].empty?}" %>
+    <%= f.text_field :email, placeholder: 'Email' %>
+    <%= f.text_field :website, placeholder: 'Website' %>
+    <%= f.text_area :comment, placeholder: 'Comment *', rows: 8, class: "#{'error' unless f.object.errors[:comment].empty?}" %>
+    <button type='submit'>Add Comment</button>
+<% end %>
+
+<% if flash[:comment_status] != nil %>
+    <script type="text/javascript">
+        $(function() {
+            $('#viewport').mCustomScrollbar("scrollTo", "#add-comment-form-header");
+        });
+    </script>
+<% end %>

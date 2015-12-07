@@ -26,7 +26,6 @@ ActiveAdmin.register BlogPost do
 
 
   show do
-    link_to "abc", "xyz"
     attributes_table do
       row :title
       row :published
@@ -42,6 +41,7 @@ ActiveAdmin.register BlogPost do
       row :updated_at
     end
   end
+
 
   action_item only: :show do
     link_to 'Preview', show_post_path(blog_post, preview_key: blog_post.preview_key), target: "_blank"

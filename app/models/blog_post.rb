@@ -1,6 +1,7 @@
 class BlogPost < ActiveRecord::Base
   mount_uploader :featured_image, ImageUploader
   include ActionView::Helpers::TextHelper
+  has_many :comments
 
   validates :title, presence: true
   validates :content, presence: true
