@@ -9,6 +9,7 @@ $ ->
         apply_source_formatting: false
         image_caption: true
         image_dimensions: false
+        image_title: true
         plugins: [
             'code link textcolor colorpicker image'
         ]

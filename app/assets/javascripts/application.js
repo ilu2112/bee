@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.mCustomScrollbar.concat.min
+//= require jquery.magnific-popup.min
 //= require_directory .

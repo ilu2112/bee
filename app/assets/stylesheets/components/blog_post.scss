@@ -48,6 +48,10 @@
         padding: 1.5em 15px;
         box-sizing: border-box;
         max-width: 100%;
+
+        &:hover {
+            cursor: zoom-in;
+        }
     }
 
 
