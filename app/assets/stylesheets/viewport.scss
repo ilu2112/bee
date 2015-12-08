@@ -1,14 +1,10 @@
 #viewport {
     overflow-x: hidden;
     overflow-y: auto;
+    position: relative;
 
-    .mCSB_inside > .mCSB_container {
-        margin-right: 0px;
-    }
-
-    .mCSB_scrollTools {
-        background: #252525;
-        z-index: 20;
+    .ps-scrollbar-y-rail {
+        z-index: 100;
     }
 }
 
@@ -16,9 +12,5 @@
 
 @media all and (max-width: 768px) {
     #viewport {
-        .mCSB_scrollTools {
-            background: none;
-            margin-right: -6px;
-        }
     }
 }

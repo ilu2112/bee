@@ -12,6 +12,10 @@ $ ->
         any: () -> (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
     }
 
+    # if isMobile.any() == false
+    $('#viewport').perfectScrollbar
+        suppressScrollX: true
+'''
     if isMobile.any() == false
         $("#viewport").mCustomScrollbar
             theme: "light"
@@ -20,3 +24,4 @@ $ ->
             mouseWheel:
                 scrollAmount: 80
                 normalizeDelta: true
+'''

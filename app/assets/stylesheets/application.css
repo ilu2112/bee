@@ -11,9 +11,9 @@
  * file per style scope.
  *
  *= require normalize-rails
- *= require jquery.mCustomScrollbar
  *= require font-awesome
  *= require magnific-popup
+ *= require perfect-scrollbar
  *= require_directory .
  *= require_directory ./components
  *= require_self
