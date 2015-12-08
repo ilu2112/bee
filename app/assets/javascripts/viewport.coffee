@@ -6,6 +6,7 @@ $ ->
     $("#viewport").mCustomScrollbar
         theme: "light"
         alwaysShowScrollbar: 1
-        scrollInertia: 400
+        scrollInertia: 300
         mouseWheel:
-            deltaFactor: 4
+            scrollAmount: 80
+            normalizeDelta: true

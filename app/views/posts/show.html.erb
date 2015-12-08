@@ -9,9 +9,33 @@
 
 
 <% if @blog_post.comments.length > 0 %>
-    <div class="heart-separator"></div>
-    <h3 id="add-comment-form-header" class="comment-section-header">Comments</h3>
-    Comments will be here...
+    <div class="comments">
+        <div class="heart-separator"></div>
+        <h3 class="comment-section-header">Comments</h3>
+        <% @blog_post.comments.each do |comment| %>
+            <div class="comment">
+                <div class="avatar">
+                    <img src="/assets/avatar.png" />
+                </div>
+                <div class="comment-body">
+                    <h4 class="author">
+                        <% if comment.website.blank? %>
+                            <%= comment.name %>
+                        <% else %>
+                            <%= link_to comment.name, url: comment.website, target: "_blank" %>
+                        <% end %>
+                    </h4>
+                    <div class="comment-date">
+                        <%= comment.created_at.strftime "%B %d, %Y at %H:%M" %>
+                    </div>
+                    <div class="comment-content">
+                        <%= comment.comment %>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        <% end %>
+    </div>
 <% end %>
 
 
@@ -30,8 +54,12 @@
         </div>
     <% end %>
 
+    <div class="form-notes">
+        Your email address will not be published. Required fields are marked *
+    </div>
+    
     <%= f.text_field :name, placeholder: 'Name *', class: "#{'error' unless f.object.errors[:name].empty?}" %>
-    <%= f.text_field :email, placeholder: 'Email' %>
+    <%= f.text_field :email, placeholder: 'Email *', class: "#{'error' unless f.object.errors[:email].empty?}" %>
     <%= f.text_field :website, placeholder: 'Website' %>
     <%= f.text_area :comment, placeholder: 'Comment *', rows: 8, class: "#{'error' unless f.object.errors[:comment].empty?}" %>
     <button type='submit'>Add Comment</button>

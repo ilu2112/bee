@@ -9,10 +9,15 @@ body {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     line-height: 1.1;
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+
+.clearfix {
+    clear: both;
 }

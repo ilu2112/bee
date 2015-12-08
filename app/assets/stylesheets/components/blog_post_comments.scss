@@ -17,20 +17,107 @@
     text-align: center;
     width: 100%;
     display: block;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 28px;
 }
 
 
 @media all and (min-width: 992px) {
    .heart-separator:before {
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 48px;
     } 
 }
 
 
+.comments {
+    margin-bottom: -20px;
+
+    .comment {
+        width: 100%;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+
+        &:last-of-type {
+            margin-bottom: 0px;
+            border-bottom: none;
+        }
+
+        .avatar {
+            display: inline-block;
+            float: left;
+            margin-right: -110px;
+
+            img {
+                border-radius: 32px;
+                width: 64px;
+                height: 64px;
+                display: block;
+            }
+        }
+
+        .comment-body {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            padding-left: 74px;
+            box-sizing: border-box;
+
+            .author, .author a {
+                margin: 0px 0px 5px 0px;
+                font-size: 1.25rem;
+                font-weight: 800;
+                font-style: normal;
+                letter-spacing: .6px;
+                text-decoration: none;
+                color: #000;
+                padding-top: 6px;
+            }
+
+            .author a {
+                transition: opacity .25s ease;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+
+            .comment-date {
+                color: rgba(0,0,0,0.3);
+                font-family: "Fira Sans",sans-serif;
+                font-size: 14px;
+                padding-bottom: 6px;
+            }
+            
+            .comment-content {
+                font-size: .95rem;
+                color: rgba(0, 0, 0, 0.8);
+                font-family: 'PT Serif', serif;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .comments .comment .avatar img {
+        margin-right: 46px;
+    }
+
+    .comments .comment .comment-body {
+        padding-left: 100px;
+    }
+}
+
+
 .add-comment-form {
+    .form-notes {
+        color: rgba(0,0,0,0.3);
+        font-size: 14px;
+        font-family: "Fira Sans",sans-serif;
+        margin-bottom: 10px;
+    }
+
     input, textarea {
         width: 100%;
         box-sizing: border-box;
