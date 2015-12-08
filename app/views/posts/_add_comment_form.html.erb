@@ -28,8 +28,6 @@
 
 <% if flash[:comment_status] != nil %>
     <script type="text/javascript">
-        $(function() {
-            $('#viewport').mCustomScrollbar("scrollTo", "#add-comment-form-header");
-        });
+        window.location.hash = "#add-comment-form-header"
     </script>
 <% end %>
