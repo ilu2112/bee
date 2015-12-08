@@ -16,3 +16,4 @@ $ ->
             'styleselect | bold italic | undo redo | forecolor backcolor | bullist numlist',
             'image | link | code'
         ]
+        image_list: '/admin/content_images/list_images'
