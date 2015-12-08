@@ -43,14 +43,16 @@
         }
     }
 
+    img {
+        display: block;
+        padding: 1.5em 15px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+
     figure.image {
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-
-        img {
-            max-width: 100%;
-        }
-
+        margin: 0px;
         figcaption {
             text-align: center;
             font-family: 'Fira Sans', sans-serif;
@@ -58,6 +60,11 @@
             text-transform: uppercase;
             font-weight: bold;
             font-size: .9rem;
+            margin-top: -1.5em;
+            margin-bottom: 0.5em;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
         }
     }
 }
@@ -88,9 +95,9 @@
 // ...
 // RWD: image figure margin changes
 // ...
-@media all and (max-width: 400px) {
-    .blog-post-content figure.image {
-        margin-left: 15px;
-        margin-right: 15px;
+@media all and (min-width: 400px) {
+    .blog-post-content img, .blog-post-content figure.image figcaption {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
