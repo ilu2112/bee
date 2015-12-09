@@ -29,13 +29,23 @@
     }
 
     .page-title {
-        color: rgb(255, 255, 255);
         display: block;
+        margin: 20px auto 10px auto;
+        text-align: center;
         text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         font-family: 'Montserrat', sans-serif;
         font-weight: 800;
-        margin: 20px auto 10px auto;
-        text-align: center;
+        color: rgb(255, 255, 255);
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity .25s ease;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
     }
 
     .page-description {

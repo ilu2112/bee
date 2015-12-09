@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   
   def show
     @blog_post = BlogPost.find params[:id]
+    @page_title = @blog_post.title
     @comment = Comment.new
     redirect_to :root if @blog_post.published == false and @blog_post.preview_key != params[:preview_key]
   end
@@ -17,6 +18,7 @@ class PostsController < ApplicationController
     )
     @comment.assign_attributes(comment_data)
     @blog_post = BlogPost.find params[:id]
+    @page_title = @blog_post.title
     @comment.blog_post = @blog_post
     if @comment.save
       flash[:comment_status] = "comment_added"

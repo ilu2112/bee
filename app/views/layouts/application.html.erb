@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bee</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <% if @page_title %>
+            Coding Buzz | <%= @page_title %>
+        <% else %>
+            Coding Buzz | where (software) craftsmanship meets passion
+        <% end %>
+    </title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-<div id="viewport">
-    <%= yield :header_image %>
-    <div id="main-content-wrapper">
-        <div id="content">
-            <%= yield %>
+    <div id="viewport">
+        <%= yield :header_image %>
+        <div id="main-content-wrapper">
+            <div id="content">
+                <%= yield %>
+            </div>
         </div>
+        <%= render "layouts/menu_slider" %>
     </div>
-    <%= render "layouts/menu_slider" %>
-</div>
-
 </body>
 </html>

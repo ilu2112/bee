@@ -1,5 +1,5 @@
 $ ->
-    $('#menu-slider .swipe-button, #menu-slider-horizontal-bar .swipe-button, #menu-slider-horizontal-bar').on 'click', (e) ->
+    $('#menu-slider .swipe-button, #menu-slider .grab-panel, #menu-slider-horizontal-bar .swipe-button, #menu-slider-horizontal-bar').on 'click', (e) ->
         e.preventDefault()
         e.stopPropagation()
         $("#menu-slider").toggleClass "expanded"
