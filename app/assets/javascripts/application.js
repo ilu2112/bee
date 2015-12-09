@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_mobile_config
+//= require jquery.mobile
 //= require perfect-scrollbar
 //= require jquery.magnific-popup.min
 //= require_directory .

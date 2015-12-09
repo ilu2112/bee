@@ -1,19 +1,19 @@
 $ ->
-    $('#menu-slider .swipe-button, #menu-slider .grab-panel, #menu-slider-horizontal-bar .swipe-button, #menu-slider-horizontal-bar').on 'click', (e) ->
-        e.preventDefault()
-        e.stopPropagation()
-        $("#menu-slider").toggleClass "expanded"
-        $("#menu-slider-horizontal-bar").toggleClass "expanded"
-        $("#slider-glass-panel").fadeToggle 350
+    isMenuSliderVisible = () ->
+        $("#menu-slider").hasClass "expanded"
+
+
+    showMenuSlider = () ->
+        $("#menu-slider").addClass "expanded"
+        $("#menu-slider-horizontal-bar").addClass "expanded"
+        $("#slider-glass-panel").fadeIn 350
         animateButton = () ->
-            $("#menu-slider .swipe-button").toggleClass "is-active"
-            $("#menu-slider-horizontal-bar .swipe-button").toggleClass "is-active"
+            $("#menu-slider .swipe-button").addClass "is-active"
+            $("#menu-slider-horizontal-bar .swipe-button").addClass "is-active"
         setTimeout animateButton, 350
 
 
-    $('#slider-glass-panel').on 'click', (e) ->
-        e.preventDefault()
-        e.stopPropagation()
+    hideMenuSlider = () ->
         $("#menu-slider").removeClass "expanded"
         $("#menu-slider-horizontal-bar").removeClass "expanded"
         $("#slider-glass-panel").fadeOut 350
@@ -21,3 +21,28 @@ $ ->
             $("#menu-slider .swipe-button").removeClass "is-active"
             $("#menu-slider-horizontal-bar .swipe-button").removeClass "is-active"
         setTimeout animateButton, 350
+
+
+    $('#menu-slider .swipe-button, #menu-slider .grab-panel, #menu-slider-horizontal-bar').on 'click', (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        if isMenuSliderVisible()
+            hideMenuSlider()
+        else
+            showMenuSlider()
+
+
+    $('#slider-glass-panel').on 'click', (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        hideMenuSlider()
+
+
+    $(window).on 'swipeleft', (e) ->
+        if isMenuSliderVisible() == false
+            showMenuSlider()
+
+
+    $(window).on 'swiperight', (e) ->
+        if isMenuSliderVisible()
+            hideMenuSlider()
