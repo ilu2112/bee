@@ -28,20 +28,20 @@
         <nav class="site-navigation">
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="#" class="active">
+                    <%= link_to root_path, class: "#{'active' if @active_menu_item == 'home'}" do %>
                         <i class="fa fa-home"></i> Home
                         <span class="item-description">
                             my blog's home page
                         </span>
-                    </a>
+                    <% end %>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <%= link_to author_page_path, class: "#{'active' if @active_menu_item == 'author'}" do %>
                         <i class="fa fa-user-secret"></i> Author
                         <span class="item-description">
                             read about me
                         </span>
-                    </a>
+                    <% end %>
                 </li>
             </ul>
         </nav>
