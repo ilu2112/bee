@@ -15,7 +15,6 @@ gem 'normalize-rails'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'tinymce-rails'
-gem 'jquery_mobile_rails'
 
 group :development, :test do
   gem 'byebug'

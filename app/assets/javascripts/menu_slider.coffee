@@ -38,11 +38,12 @@ $ ->
         hideMenuSlider()
 
 
-    $(window).on 'swipeleft', (e) ->
-        if isMenuSliderVisible() == false
-            showMenuSlider()
-
-
-    $(window).on 'swiperight', (e) ->
-        if isMenuSliderVisible()
-            hideMenuSlider()
+    $("#viewport").swipe
+        swipeLeft: () ->
+            if isMenuSliderVisible() == false
+                showMenuSlider()
+        swipeRight: () ->
+            if isMenuSliderVisible()
+                hideMenuSlider()
+        treshold: 75
+        fallbackToMouseEvents: false
