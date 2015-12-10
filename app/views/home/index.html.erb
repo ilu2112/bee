@@ -14,7 +14,9 @@
         <div class="entry-meta">
             <%= blog_post.created_at.strftime "%B %d, %Y" %>
             BY
-            <a href="#">MARCIN SKIBA</a>
+            <%= link_to author_page_path do %>
+                MARCIN SKIBA
+            <% end %>
         </div>
     </div> 
 <% end %>
