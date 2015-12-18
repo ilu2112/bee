@@ -43,6 +43,14 @@
                         </span>
                     <% end %>
                 </li>
+                <li class="nav-item">
+                    <%= link_to contact_me_page_path, class: "#{'active' if @active_menu_item == 'contact_me'}" do %>
+                        <i class="fa fa-envelope-o"></i> Contact me
+                        <span class="item-description">
+                            via e-mail or social media
+                        </span>
+                    <% end %>
+                </li>
             </ul>
         </nav>
 

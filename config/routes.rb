@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post '/posts/:id/add_comment', to: 'posts#add_comment', as: :add_comment
 
   get '/pages/author', to: 'static_pages#author', as: :author_page
+  get '/pages/contact_me', to: 'static_pages#contact_me', as: :contact_me_page
 end
