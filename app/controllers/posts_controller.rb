@@ -34,7 +34,6 @@ class PostsController < ApplicationController
     @blog_posts = BlogPost.all
     respond_to do |format|
       format.rss { render :layout => false }
-      format.html
     end
   end
 end
