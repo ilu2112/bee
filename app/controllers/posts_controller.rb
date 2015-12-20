@@ -28,4 +28,13 @@ class PostsController < ApplicationController
       render :show
     end
   end
+
+
+  def feed
+    @blog_posts = BlogPost.all
+    respond_to do |format|
+      format.rss { render :layout => false }
+      format.html
+    end
+  end
 end
