@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
 
   def feed
-    @blog_posts = BlogPost.all
+    @blog_posts = BlogPost.where(published: true)
     respond_to do |format|
       format.rss { render :layout => false }
     end
