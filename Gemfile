@@ -7,6 +7,7 @@ gem 'devise'
 gem 'active_skin'
 gem 'carrierwave'
 gem 'google-analytics-rails'
+gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
