@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.touchSwipe.min
 //= require jquery.magnific-popup.min
 //= require_directory .

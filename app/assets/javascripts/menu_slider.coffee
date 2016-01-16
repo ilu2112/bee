@@ -36,14 +36,3 @@ $ ->
         e.preventDefault()
         e.stopPropagation()
         hideMenuSlider()
-
-
-    $("body").swipe
-        swipeLeft: () ->
-            if isMenuSliderVisible() == false
-                showMenuSlider()
-        swipeRight: () ->
-            if isMenuSliderVisible()
-                hideMenuSlider()
-        treshold: 75
-        fallbackToMouseEvents: false
