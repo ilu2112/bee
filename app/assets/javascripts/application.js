@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.touchSwipe.min
-//= require perfect-scrollbar
 //= require jquery.magnific-popup.min
 //= require_directory .

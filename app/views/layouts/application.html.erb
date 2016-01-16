@@ -15,7 +15,7 @@
     <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-    <div id="viewport" data-enhance="false">
+    <!-- <div id="viewport" data-enhance="false"> -->
         <%= yield :header_image %>
         <div id="main-content-wrapper">
             <div id="content">
@@ -23,6 +23,6 @@
             </div>
         </div>
         <%= render "layouts/menu_slider" %>
-    </div>
+    <!-- </div> -->
 </body>
 </html>

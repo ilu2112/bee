@@ -38,7 +38,7 @@ $ ->
         hideMenuSlider()
 
 
-    $("#viewport").swipe
+    $("#body").swipe
         swipeLeft: () ->
             if isMenuSliderVisible() == false
                 showMenuSlider()
