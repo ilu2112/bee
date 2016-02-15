@@ -1,5 +1,5 @@
 <% content_for :header_image do %>
-    <%= render "header_image" %>
+    <%= render partial: "header_image", locals: {hide_title: true} %>
 <% end %>
 
 <div class="blog-post-content">

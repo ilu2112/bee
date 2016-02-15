@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def author
     @active_menu_item = "author"
     @page_image = "/assets/author.jpg"
-    @page_title = ""
+    @page_title = "Marcin Skiba"
     @page_summary = ""
   end
 
