@@ -10,6 +10,7 @@ $ ->
         image_caption: true
         image_dimensions: false
         image_title: true
+        extended_valid_elements: 'script[language|type|src]'
         plugins: [
             'code link textcolor colorpicker image'
         ]
