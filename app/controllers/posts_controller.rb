@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @blog_post = BlogPost.find params[:id]
     @page_title = @blog_post.title
     @comment.blog_post = @blog_post
-    if @comment.save
+    if verify_recaptcha(model: @comment) && @comment.save
       flash[:comment_status] = "comment_added"
       redirect_to action: 'show', id: params[:id]
     else

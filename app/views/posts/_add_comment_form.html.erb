@@ -22,6 +22,7 @@
     <%= f.text_field :email, placeholder: 'Email *', class: "#{'error' unless f.object.errors[:email].empty?}" %>
     <%= f.text_field :website, placeholder: 'Website' %>
     <%= f.text_area :comment, placeholder: 'Comment *', rows: 8, class: "#{'error' unless f.object.errors[:comment].empty?}" %>
+    <%= recaptcha_tags %>
     <button type='submit'>Add Comment</button>
 <% end %>
 

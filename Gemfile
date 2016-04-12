@@ -17,6 +17,7 @@ gem 'normalize-rails'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'tinymce-rails'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :development, :test do
   gem 'byebug'

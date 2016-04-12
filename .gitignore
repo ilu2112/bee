@@ -17,3 +17,7 @@
 /tmp
 
 /public/uploads
+
+# Intellij
+.idea/
+*.iml
